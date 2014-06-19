@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- comment -->
+<root xmlns:html="nothing">
+  <book id="xxxxx">
+    <html:title>the book of life ...</html:title>
+    something about ....
+    <chapter number="1" part="1" />
+    <![CDATA[<chapter number="1" part="1" />]]>
+  </book>
+  
+</root> 

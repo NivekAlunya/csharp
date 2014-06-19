@@ -1,0 +1,8 @@
+Complétez les methodes CRUD de gestion des Services proposées par la classe MgtService.
+
+Contraintes : 
+- la liste de services ne contient pas de doublons (pas 2 fois le même service dans la liste, pas 2 services avec
+le même code, pas 2 services avec le même libelle.
+
+- La modification d'un objet Service est totalement réalisée ou totalement annulée (retour à l'état du Service
+avant le début des modifications.

@@ -1,0 +1,22 @@
+﻿Règles de gestion à implémenter :
+Client : 
+ - Le nom ne doit pas être vide
+ - Le nom est stocké en maj.
+ - Le prenom ne doit pas être vide
+ - Chaque mot du prénom commence par une maj.
+ - Le code postal du client est compris entre 1000 et 99999 
+ - La ville du client est obligatoire et chaque première lettre est en majuscule
+ 
+Livre :
+ - L'auteur du livre est obligatoire
+ - Le nombre de pages du Livre est strictement supérieur à zéro
+ - La référence isbn du Livre est :
+        - reçue au format String (13 caractères minimum)
+        - ne contenir que des caractères numériques pour pouvoir être stocké au format long
+        - livrée au format String "###-#-####-####-#"
+        - stockée au format long
+ - Le prix du Livre est calculé (pas déclaré dans la classe)
+		(nbpages * (decimal)0.05) + 10
+ 
+
+Votre programme Main doit vous permettre de valider l'ensemble de ces règles.

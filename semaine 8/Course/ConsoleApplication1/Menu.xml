@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--DOCTYPE restaurant SYSTEM "Menu.dtd" -->
+<!--DOCTYPE
+  restaurant [
+  <!ELEMENT restaurant (menu+)>
+  <!ELEMENT menu (first-dish,main-dish,cheese?,dessert?,coffee?,liquor?)>
+  <!ELEMENT first-dish (name+)>
+  <!ELEMENT main-dish (name+)>
+  <!ELEMENT cheese (name+)>
+  <!ELEMENT coffee (name+)>
+  <!ELEMENT liquor (name+)>
+  <!ELEMENT dessert (name+)>
+  <!ELEMENT name (#PCDATA)>
+  <!ATTLIST menu 
+    type (cheap|gastronomic) #REQUIRED
+    price NMTOKEN #REQUIRED
+  >
+  <!ATTLIST name 
+    energy NMTOKENS #REQUIRED
+    savour (chocolate) #IMPLIED
+    fruit (apricot) #IMPLIED
+  >
+]
+-->
+<!--  xmlns="http://tempuri.org/Menu.xsd"-->
+<restaurant  xmlns="http://tempuri.org/Menu.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Menu.xsd">
+  <menu type="gastronomic" price="60">
+    <first-dish>
+      <name energy="50">Radis</name>
+      <name energy="450">Saucisson</name>
+      <name energy="10">Salade verte</name>
+    </first-dish>
+    <main-dish>
+      <name energy="150">Choucroute</name>
+      <name energy="2500">Cassoulet</name>
+      <name energy="1000">Couscous</name>
+    </main-dish>
+    <cheese>
+      <name energy="1500">Camenbert</name>
+      <name energy="150">Brie</name>
+      <name energy="50">Roquefort</name>
+    </cheese>
+  </menu>
+  <menu type="cheap">
+    <first-dish>
+      <name energy="50">Radis</name>
+      <name energy="450">Saucisson</name>
+      <name energy="10">Salade verte</name>
+    </first-dish>
+    <main-dish>
+      <name energy="150">Choucroute</name>
+      <name energy="2500">Cassoulet</name>
+      <name energy="1000">Couscous</name>
+    </main-dish>
+    <dessert>
+      <name energy="1500" savour="chocolate">Icecream</name>
+      <name energy="150" fruit="apricot">Pie</name>
+      <name energy="50">Roquefort</name>
+    </dessert>
+    <coffee>
+      <name energy="250">irish coffee</name>
+    </coffee>
+    <liquor>
+      <name energy="1000" savour="xxxxx">liquor</name>
+    </liquor>
+  </menu>
+</restaurant>
+

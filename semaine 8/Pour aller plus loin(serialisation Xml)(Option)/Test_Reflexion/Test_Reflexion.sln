@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Reflexion", "Test_Reflexion\Test_Reflexion.csproj", "{CC1D68E3-52E1-49BF-B14D-7E05F25F794F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BO", "BO\BO.csproj", "{D00272B5-53B8-45FA-A5E2-C7F359791A05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC1D68E3-52E1-49BF-B14D-7E05F25F794F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC1D68E3-52E1-49BF-B14D-7E05F25F794F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC1D68E3-52E1-49BF-B14D-7E05F25F794F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC1D68E3-52E1-49BF-B14D-7E05F25F794F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D00272B5-53B8-45FA-A5E2-C7F359791A05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D00272B5-53B8-45FA-A5E2-C7F359791A05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D00272B5-53B8-45FA-A5E2-C7F359791A05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D00272B5-53B8-45FA-A5E2-C7F359791A05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

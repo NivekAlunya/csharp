@@ -1,0 +1,18 @@
+﻿<!ELEMENT restaurant (menu+)>
+<!ELEMENT menu (first-dish,main-dish,cheese?,dessert?,coffee?,liquor?)>
+<!ELEMENT first-dish (name+)>
+<!ELEMENT main-dish (name+)>
+<!ELEMENT cheese (name+)>
+<!ELEMENT coffee (name+)>
+<!ELEMENT liquor (name+)>
+<!ELEMENT dessert (name+)>
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST menu 
+    type (cheap|gastronomic) #REQUIRED
+    price NMTOKEN #REQUIRED
+  >
+<!ATTLIST name 
+    energy NMTOKENS #REQUIRED
+    savour (chocolate) #IMPLIED
+    fruit (apricot) #IMPLIED
+  >

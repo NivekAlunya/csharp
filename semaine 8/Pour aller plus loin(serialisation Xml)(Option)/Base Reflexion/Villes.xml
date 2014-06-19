@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <object type="BO.Ville">
+    <property name="Nom" value="Rennes"/>
+    <property name="Dept" value="35"/>
+  </object>
+  <object type="BO.Ville">
+    <property name="Nom" value="Nantes"/>
+    <property name="Dept" value="44"/>
+  </object>
+  <object type="BO.Ville">
+    <property name="Nom" value="Angers"/>
+    <property name="Dept" value="35"/>
+  </object>
+</objects>

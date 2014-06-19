@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <object type="BO.Client">
+    <property name="Nom" value="Toto"/>
+    <property name="Prenom" value="prenom de Toto"/>
+  </object>
+  <object type="BO.Client">
+    <property name="Nom" value="Titi"/>
+    <property name="Prenom" value="prenom de Titi"/>
+  </object>
+  <object type="BO.Client">
+    <property name="Nom" value="Tutu"/>
+    <property name="Prenom" value="prenom de Tutu"/>
+  </object>
+</objects>

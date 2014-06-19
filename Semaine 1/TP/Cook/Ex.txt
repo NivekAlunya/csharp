@@ -1,0 +1,97 @@
+﻿Version 2 : 
+Procédure Principale()
+Declaration 
+	Type_Viande		Texte
+	Poids			 Entier
+	Mode_Cuisson		 Entier
+				
+Action
+	Type_Viande =  FAIRE Saisir_Viande()
+	Mode_Cuisson = FAIRE Saisir_Mode_Cuisson()
+	Poids = FAIRE Saisir_Poids()
+
+	AFFICHER "Le temps de cuisson nécessaire est de " & Faire Traitement(Type_Viande,Mode_Cuisson,Poids)	
+Fin Procédure Principale
+
+Fonction Saisir_Viande()  retourne texte
+Déclaration
+	saisie	texte
+Action
+	Répéter
+		effacer
+		Afficher "Saisir type de la viande : "B" pour Bœuf, "P" pour Porc"
+		ENTRER	saisie
+	jusqu'à Saisie = "B" OU saisie = "P"
+
+	retourne saisie
+Fin Fonction Saisir_Viande
+
+Fonction Saisir_Mode_Cuisson() retourne entier
+Déclaration 
+	saisie	 entier
+Action
+	Répeter
+		effacer	
+		Afficher "Saisir mode de cuisson (1=bleu,2=a point,3=bien cuit)"
+		ENTRER	saisie
+	jusqu'à Saisie >= 1 ET saisie <= 3
+
+	Retourne saisie
+Fin Fonction  Saisir_Mode_Cuisson
+
+Fonction Saisir_Poids() retourne entier
+Déclaration
+	saisie	 entier
+Action
+	Répéter
+		effacer	
+		Afficher "Saisir le poids, appuyez sur la touche ENTRER pour valider"
+		ENTRER saisie
+	jusqu'à Saisie > 0
+	retourne saisie
+
+Fin Fonction Saisir_Poids
+
+Fonction Traitement(arg_type_Viande texte, arg_mode_cuisson  entier, arg_poids  entier)  retourne  entier
+déclaration 
+		REF_TEMPS		numerique entier
+		REF_POIDS		numerique entier
+Action
+	Si	(arg_Type_Viande	= "B")
+		alors
+			REF_POIDS = 500
+			REF_TEMPS = Traitement_Boeuf(arg_mode_cuisson )	
+		Sinon
+			REF_POIDS = 400
+			REF_TEMPS = Traitement_Porc(arg_mode_cuisson )
+	Fin Si
+	retourne (arg_poids*(REF_TEMPS*60)) / REF_POIDS
+	
+Fin Fonction  Traitement
+
+Fonction Traitement_Boeuf(arg_mode_cuisson  entier) retourne  entier
+Action
+	Cas arg_mode_cuisson parmi
+		Si 1
+			retourne 10
+		Si 2
+			retourne 17
+		Si 3
+			retourne 25
+	Fin Cas
+Fin Fonction  Traitement_Boeuf
+
+Fonction Traitement_Porc(arg_mode_cuisson  entier) retourne  entier
+Déclaration
+	reponse entier
+Action
+	Cas arg_mode_cuisson parmi
+		Si 1
+			reponse =  15
+		Si 2
+			reponse =  25
+		Si 3
+			reponse =  40
+	Fin Cas
+	retourne reponse
+Fin Fonction  Traitement_Porc

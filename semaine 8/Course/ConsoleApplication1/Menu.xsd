@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Menu"
+    targetNamespace="http://tempuri.org/Menu.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/Menu.xsd"
+    xmlns:mstns="http://tempuri.org/Menu.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  
+  <xs:element name="restaurant">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="menu" type="type-menu" minOccurs="1" maxOccurs="unbounded"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="menu-item">
+      <xs:sequence>
+        <xs:element name="name" type="type-name" minOccurs="1" maxOccurs="unbounded"></xs:element>
+      </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="type-menu">
+     <xs:sequence>
+        <xs:element name="first-dish" type="menu-item"></xs:element>
+        <xs:element name="main-dish" type="menu-item"></xs:element>
+        <xs:choice>
+          <xs:element name="cheese" type="menu-item"></xs:element>
+          <xs:element name="dessert" type="menu-item"></xs:element>
+        </xs:choice>
+        <xs:element name="coffee" type="menu-item" minOccurs="0" maxOccurs="1"></xs:element>
+        <xs:element name="liquor" type="menu-item" minOccurs="0" maxOccurs="1"></xs:element>
+     </xs:sequence>
+    <xs:attribute name="price" type="xs:integer" use="optional"></xs:attribute>
+    <xs:attribute name="type" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="gastronomic|cheap" ></xs:pattern>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="type-name">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="energy" type="xs:integer" use="required"></xs:attribute>
+        <xs:attribute name="fruit" type="xs:string" use="optional"></xs:attribute>
+        <xs:attribute name="savour" type="xs:string" use="optional"></xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+</xs:schema>
